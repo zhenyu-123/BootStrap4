@@ -1,0 +1,263 @@
+/* 公共 */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+html,
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+    font-family: lk;
+    src: url('../fonts/lk.eot') format('embedded-opentype'),
+        url('../fonts/lk.svg') format('svg'),
+        url('../fonts/lk.ttf') format('truetype'),
+        url('../fonts/lk.woff') format('woff');
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    font-family: lk;
+    font-style: normal;
+}
+
+/* 头部 */
+#il_header {}
+
+#il_header .top-bar {
+    height: 40px;
+    line-height: 39px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#il_header .top-bar .container .row>div+div {
+    border-left: 1px #e0e0e0 solid;
+}
+
+#il_header .top-bar .container .row a {
+    font-size: 13px;
+    position: relative;
+}
+
+#il_header .top-bar-1 a:hover img {
+    display: block;
+}
+
+#il_header .top-bar-1 a img {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    width: 150px;
+    display: none;
+}
+
+.icon-phone::before {
+    content: '\e958';
+    font-size: 14px;
+}
+
+.icon-tel::before {
+    content: '\e942';
+    font-size: 14px;
+}
+
+.lk-zc {
+    font-size: 12px !important;
+}
+
+.lk-dl {
+    margin-right: 10px;
+    background-color: #0AB4F7;
+    border-color: #0AB4F7;
+}
+
+.lk-dl:hover {
+    background-color: #0AB4F7;
+    border-color: #0AB4F7;
+}
+
+.lk-nav .container .navbar-brand img {
+    width: 130px;
+}
+
+.lk-nav .container .navbar-brand {
+    margin-left: 20px;
+}
+
+.lk-nav {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.lk-nav .container .navbar-nav li a {
+    height: 70px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lk-nav .container .navbar-nav .nav-item>a:hover {
+    border-bottom: 2px solid purple;
+}
+
+/* 轮播图 */
+#il_banner .carousel-inner .carousel-item {
+    background: no-repeat center center;
+    background-size: cover;
+}
+
+#il_banner .carousel-inner .carousel-item img {
+    height: 100%;
+}
+
+.carousel-indicators li {
+    width: 40px;
+    height: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* 媒体查询  大于900px时候*/
+@media screen and (min-width:900px) {
+    #il_banner .carousel-inner .carousel-item {
+        height: 430px;
+    }
+}
+
+/* 热门课程 */
+.it-avatar {
+    width: 130px;
+}
+
+.lk-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+}
+
+/* 产品中心 */
+#il_center {
+    background-color: #f0f0f0;
+    padding: 20px 0;
+}
+
+#il_center .nav-tabs {
+    border: none;
+}
+
+#il_center .nav-item {
+    font-size: 18px;
+    color: #222;
+}
+
+#il_center .nav-item a {
+    border: none;
+    background: transparent;
+}
+
+#il_center .nav-item a.active {
+    color: purple;
+    border-bottom: 2px solid purple;
+}
+
+/* @media screen and (max-width:1200px) {
+    #il_center .nav-tabs {
+        width: 1200px;
+    }
+
+    #il_center .lk-auto {
+        overflow: auto;
+    }
+} */
+#il_center .lk-auto {
+    overflow: auto;
+}
+
+@media screen and (min-width:570px) {
+    #il_center .lk-two {
+        display: block;
+    }
+}
+
+/* 友情链接 */
+#lk_friend .logos {
+    list-style: none;
+    text-align: center;
+}
+
+#lk_friend .logos li {
+    display: inline-block;
+    padding: 20px 30px;
+}
+
+/* 尾部 */
+#lk_footer {
+    width: 100%;
+    /* height: 200px; */
+    background: url("../images/ft_bg.png ") no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+    color: #fff;
+    font-size: 16px;
+}
+
+#lk_footer ul {
+    list-style: none;
+}
+
+#lk_footer .one,
+#lk_footer .two {
+    padding: 10px;
+    border-right: 1px solid #666;
+    height: 180px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#lk_footer .one li {
+    line-height: 40px;
+}
+
+#lk_footer .one li a {
+    color: #fff;
+}
+
+#lk_footer .three {
+    padding: 10px 50px;
+    height: 180px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#lk_footer .three a {
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+@media screen and (max-width:570px) {
+    #lk_footer .ones {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+}
